@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game Project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <div class="game">
+        <h1>Bat Ball Stump Game</h1>
+        <button onclick="
+        let randumNumber = Math.random()*3;
+        let computerChoice;
+        let resultmsg;
+        if(randumNumber > 0 && randumNumber <= 1)
+        {
+             computerChoice='Bat'; 
+            
+        }
+        else if(randumNumber > 1 && randumNumber <= 2)
+        {
+             computerChoice='Ball';
+            
+        }else{
+            computerChoice='Stump';
+            
+        }
+        if(computerChoice === 'Ball'){
+            resultmsg='User won the Game.';
+        }else if(computerChoice === 'Bat'){
+        
+           resultmsg='match tie ';
+        }
+        else{
+            resultmsg='computer won the Game.';
+        }
+
+        alert(`you have choosen Bat. computer has choosen ${computerChoice} and ${resultmsg}`);
+       ">Bat</button>
+
+
+            <button onclick="alert('you have choosen ball');
+            randumNumber = Math.random()*3;
+            
+            if(randumNumber > 0 && randumNumber <= 1)
+            {
+                computerChoice ='Bat'; 
+                
+            }
+            else if(randumNumber > 1 && randumNumber <= 2)
+            {
+                computerChoice ='Ball';
+                
+            }else{
+                computerChoice ='Stump';
+                
+            }
+            if(computerChoice === 'Ball'){
+                resultmsg='the Game has tie.';
+            }else if(computerChoice === 'Bat'){
+
+            resultmsg='computer won Game  ';
+            }else{
+                resultmsg='user won the Game.';
+            }
+
+               alert(` computer is ${computerChoice} and ${resultmsg}`);
+            ">Ball</button>
+
+         <button onclick="alert('you have choosen Stump');
+            randumNumber = Math.random()*3;
+            
+            if(randumNumber > 0 && randumNumber <= 1)
+            {
+                computerChoice ='Bat'; 
+                
+            }
+            else if(randumNumber > 1 && randumNumber <= 2)
+            {
+                computerChoice ='Ball';
+                
+            }else{
+                computerChoice ='Stump';
+                
+            }
+            if(computerChoice === 'Ball'){
+                resultmsg='Computer won the Game';
+            }else if(computerChoice === 'Bat'){
+
+                 resultmsg='User won the Game ';
+            }else{
+                 resultmsg='Game tie';
+            }
+
+               alert(`Computer is ${computerChoice} and ${resultmsg}`);
+         ">Stump</button>
+
+         </div>
+         <p>
+            GAME RULE:
+            <HR>
+          1.  YOU HAVE TO CHOOSE A BUTTON(BAT/BALL/STUMP) AND COMPUTER WILL CHOOSE A RANDOM BUTTON(BAT/BALL/STUMP) AND IT WILL SHOW WHO WIN THE GAME.<BR /><BR />
+          2.IF BOTH OF YOU CHOOSE SAME BUTTON THE GAME WILL TIE
+         </p>
+  
+<script src="./script.js"></script>    
+</body>
+</html>
