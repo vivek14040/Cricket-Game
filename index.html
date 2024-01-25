@@ -10,90 +10,65 @@
       <div class="game">
         <h1>Bat Ball Stump Game</h1>
         <button onclick="
-        let randumNumber = Math.random()*3;
-        let computerChoice;
-        let resultmsg;
-        if(randumNumber > 0 && randumNumber <= 1)
-        {
-             computerChoice='Bat'; 
-            
-        }
-        else if(randumNumber > 1 && randumNumber <= 2)
-        {
-             computerChoice='Ball';
-            
-        }else{
-            computerChoice='Stump';
-            
-        }
+          game();
         if(computerChoice === 'Ball'){
+           score.win++;
             resultmsg='User won the Game.';
         }else if(computerChoice === 'Bat'){
-        
+           score.tie++;
            resultmsg='match tie ';
         }
         else{
+            score.lost++;
             resultmsg='computer won the Game.';
         }
 
-        alert(`you have choosen Bat. computer has choosen ${computerChoice} and ${resultmsg}`);
+        alert(`you have choosen Bat. computer has choosen ${computerChoice}
+        
+        and ${resultmsg} 
+        
+        won: ${score.win} , lost:${score.lost}, tie:${score.tie}`);
        ">Bat</button>
 
 
-            <button onclick="alert('you have choosen ball');
-            randumNumber = Math.random()*3;
-            
-            if(randumNumber > 0 && randumNumber <= 1)
-            {
-                computerChoice ='Bat'; 
-                
-            }
-            else if(randumNumber > 1 && randumNumber <= 2)
-            {
-                computerChoice ='Ball';
-                
-            }else{
-                computerChoice ='Stump';
-                
-            }
+            <button onclick=";
+              game();
             if(computerChoice === 'Ball'){
+              score.tie++;
                 resultmsg='the Game has tie.';
             }else if(computerChoice === 'Bat'){
-
+              score.win++;
             resultmsg='computer won Game  ';
             }else{
+              score.lost++;
                 resultmsg='user won the Game.';
             }
 
-               alert(` computer has choosen ${computerChoice} and ${resultmsg}`);
+               alert(`you have choosen ball. computer has choosen ${computerChoice} 
+               
+               and ${resultmsg} 
+               
+               won: ${score.win} , lost:${score.lost}, tie:${score.tie}` );
             ">Ball</button>
 
-         <button onclick="alert('you have choosen Stump');
-            randumNumber = Math.random()*3;
-            
-            if(randumNumber > 0 && randumNumber <= 1)
-            {
-                computerChoice ='Bat'; 
-                
-            }
-            else if(randumNumber > 1 && randumNumber <= 2)
-            {
-                computerChoice ='Ball';
-                
-            }else{
-                computerChoice ='Stump';
-                
-            }
+         <button onclick="
+                     
+               game();
             if(computerChoice === 'Ball'){
+              score.lost++;
                 resultmsg='Computer won the Game';
             }else if(computerChoice === 'Bat'){
-
+                  score.win++;
                  resultmsg='User won the Game ';
             }else{
+              score.tie++;
                  resultmsg='Game tie';
             }
 
-               alert(`Computer has choosen ${computerChoice} and ${resultmsg}`);
+               alert(`you have choosen stump. Computer has choosen ${computerChoice} and 
+               
+               ${resultmsg}
+               won: ${score.win} , lost:${score.lost}, tie:${score.tie}`);
          ">Stump</button>
 
          </div>
@@ -101,7 +76,7 @@
             GAME RULE:
             <HR>
           1.  YOU HAVE TO CHOOSE A BUTTON(BAT/BALL/STUMP) AND COMPUTER WILL CHOOSE A RANDOM BUTTON(BAT/BALL/STUMP) AND IT WILL SHOW WHO WIN THE GAME.<BR /><BR />
-          2.IF BOTH OF YOU CHOOSE SAME BUTTON THE GAME WILL TIE
+          2.IF BOTH OF YOU CHOOSE SAME BUTTON THE GAME WILL TIE.
          </p>
   
 <script src="./script.js"></script>    

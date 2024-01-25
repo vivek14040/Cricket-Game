@@ -7,6 +7,10 @@ body{
     text-align: center;
     border-radius: 50px;
     
+    
+}
+.game{
+    background-color: aquamarine;
 }
 button{
     background-color: green;
